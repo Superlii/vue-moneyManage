@@ -11,6 +11,7 @@ const User = require("../../models/User");
 
 // 引入验证方法
 const validateRegisterInput = require("../../validation/register");
+const validateLoginInput = require("../../validation/login");
 
 // $route  GET api/users/test
 // @desc   返回的请求的json数据
@@ -67,6 +68,13 @@ router.post("/register",(req,res) => {
 // @access public
 
 router.post("/login",(req,res) => {
+  const {errors,isValid} = validateLoginInput(req.body);
+
+  // 判断isValid是否通过
+  if(!isValid){
+    return res.status(400).json(errors);
+  }
+
   const email = req.body.email;
   const password = req.body.password;
   // 查询数据库
