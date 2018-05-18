@@ -24,6 +24,7 @@ router.get("/test",(req,res) => {
 // @desc   返回的请求的json数据
 // @access public
 router.post("/register",(req,res) => {
+
   const {errors,isValid} = validateRegisterInput(req.body);
 
   // 判断isValid是否通过
