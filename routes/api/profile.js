@@ -205,4 +205,54 @@ router.post("/education",passport.authenticate('jwt', { session: false }),(req,r
 })
 
 
+// $route  DELETE api/profile/experience/:epx_id
+// @desc   删除个人经历
+// @access Private
+router.delete("/experience/:epx_id",passport.authenticate('jwt', { session: false }),(req,res) => {
+  
+  Profile.findOne({user:req.user.id})
+         .then(profile => {
+           const removeIndex = profile.experience
+              .map(item => item.id)
+              .indexOf(req.params.epx_id);
+
+          profile.experience.splice(removeIndex,1);
+
+          profile.save().then(profile => res.json(profile));
+         })
+         .catch(err => res.status(404).json(err));
+})
+
+// $route  DELETE api/profile/education/:edu_id
+// @desc   删除个人学历
+// @access Private
+router.delete("/education/:edu_id",passport.authenticate('jwt', { session: false }),(req,res) => {
+  
+  Profile.findOne({user:req.user.id})
+         .then(profile => {
+           const removeIndex = profile.experience
+              .map(item => item.id)
+              .indexOf(req.params.epx_id);
+
+          profile.education.splice(removeIndex,1);
+
+          profile.save().then(profile => res.json(profile));
+         })
+         .catch(err => res.status(404).json(err));
+})
+
+// $route  DELETE api/profile
+// @desc   删除整个用户
+// @access Private
+router.delete("/education/:edu_id",passport.authenticate('jwt', { session: false }),(req,res) => {
+  
+  Profile.findOneAndRemove({user:req.user.id})
+         .then(() => {
+           User.findOneAndRemove({_id:req.user.id})
+               .then(() => {
+                 res.json({success:true})
+               })
+         })
+})
+
 module.exports = router;
