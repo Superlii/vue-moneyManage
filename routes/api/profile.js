@@ -21,7 +21,9 @@ router.get("/test",(req,res) => {
 // @access private
 router.get("/",passport.authenticate('jwt', { session: false }),(req,res) => {
   const errors = {};
-  Profile.findOne({user: req.user.id}).then((profile) => {
+  Profile.findOne({user: req.user.id})
+          .populate('user',["name","avatart"])
+          .then((profile) => {
     if(!profile){
       errors.noprofile = "该用户的信息不存在~!";
       return res.status(404).json(errors);
@@ -42,7 +44,6 @@ router.post("/",passport.authenticate('jwt', { session: false }),(req,res) => {
   if(!isValid){
     return res.status(400).json(errors);
   }
-
 
   const profileFields = {};
   profileFields.user = req.user.id;
@@ -85,6 +86,60 @@ router.post("/",passport.authenticate('jwt', { session: false }),(req,res) => {
     }
   })
 
+})
+
+// $route  GET api/profile/handle/:handle
+// @desc   通过handle获取个人信息
+// @access public
+router.get("/handle/:handle",(req,res) => {
+  const errors = {};
+  Profile.findOne({handle:req.params.handle})
+         .populate('user',["name","avatart"])
+         .then(profile => {
+           if(!profile){
+             errors.noprofile = "未找到该用户信息";
+             res.status(404).json(errors);
+           }
+
+           res.json(profile);
+         })
+         .catch(err => res.status(404).json(err));
+})
+
+// $route  GET api/profile/user/:user_id
+// @desc   通过user_id获取个人信息
+// @access public
+router.get("/user/:user_id",(req,res) => {
+  const errors = {};
+  Profile.findOne({user:req.params.user_id})
+         .populate('user',["name","avatart"])
+         .then(profile => {
+           if(!profile){
+             errors.noprofile = "未找到该用户信息";
+             res.status(404).json(errors);
+           }
+
+           res.json(profile);
+         })
+         .catch(err => res.status(404).json(err));
+})
+
+// $route  GET api/profile/all
+// @desc   获取所有人的信息
+// @access public
+router.get("/all",(req,res) => {
+  const errors = {};
+  Profile.find()
+         .populate('user',["name","avatart"])
+         .then(profiles => {
+           if(!profiles){
+             errors.noprofile = "没有任何用户信息";
+             res.status(404).json(errors);
+           }
+
+           res.json(profiles);
+         })
+         .catch(err => res.status(404).json(err));
 })
 
 module.exports = router;
