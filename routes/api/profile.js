@@ -6,6 +6,8 @@ const passport = require("passport");
 const Profile = require("../../models/Profiles");
 const User = require("../../models/User");
 
+const validateProfileInput = require("../../validation/profile");
+
 
 // $route  GET api/profile/test
 // @desc   返回的请求的json数据
@@ -34,7 +36,14 @@ router.get("/",passport.authenticate('jwt', { session: false }),(req,res) => {
 // @desc   创建和编辑个人信息接口
 // @access private
 router.post("/",passport.authenticate('jwt', { session: false }),(req,res) => {
-  const errors = {};
+  const {errors,isValid} = validateProfileInput(req.body);
+
+  // 判断isValid是否通过
+  if(!isValid){
+    return res.status(400).json(errors);
+  }
+
+
   const profileFields = {};
   profileFields.user = req.user.id;
   if(req.body.handle) profileFields.handle = req.body.handle;
