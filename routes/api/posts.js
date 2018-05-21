@@ -39,4 +39,43 @@ router.post("/",passport.authenticate('jwt', { session: false }),(req,res) => {
   newPost.save().then(post => res.json(post));
 })
 
+
+// $route  GET api/posts
+// @desc   获取评论信息
+// @access public
+router.get("/",(req,res) => {
+  Post.find()
+      .sort({date: -1})
+      .then(posts => res.json(posts))
+      .catch(err => res.status(404).json({nopostsfound:"找不到任何评论信息"}))
+})
+
+// $route  GET api/posts/:id
+// @desc   获取单个评论信息
+// @access public
+router.get("/:id",(req,res) => {
+  Post.findById(req.params.id)
+      .then(post => res.json(post))
+      .catch(err => res.status(404).json({nopostsfound:"找不到该评论信息"}))
+})
+
+// $route  DELETE api/posts/:id
+// @desc   删除单个评论信息
+// @access Private
+router.delete("/:id",passport.authenticate('jwt', { session: false }),(req,res) => {
+  Profile.findOne({user:req.user.id}).then(profile => {
+    Post.findById(req.params.id)
+        .then(post => {
+          // 判断是否是本人
+          if(post.user.toString() !== req.user.id){
+            return res.status(401).json({notauthorized:"用户非法操作!"})
+          }
+
+          post.remove().then(() => res.json({success:true}))
+        })
+        .catch(err => res.status(404).json({postnotfound:"没有该评论信息"}))
+  })
+})
+
+
 module.exports = router;
