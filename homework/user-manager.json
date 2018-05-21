@@ -1,0 +1,42 @@
+{
+  "users": [
+    {
+      "name": "Henry",
+      "email": "henry@gmail.com",
+      "phone": "13651322451",
+      "balance": "110",
+      "id": 1
+    },
+    {
+      "name": "米斯特吴",
+      "phone": "13651322451",
+      "email": "27732357@qq.com",
+      "balance": 300,
+      "id": 2
+    },
+    {
+      "name": "AC总有一天",
+      "email": "27732357@qq.com",
+      "phone": "13651322451",
+      "id": 3,
+      "balance": "100"
+    }
+  ],
+  "companies": [
+    {
+      "id": 1,
+      "name": "Apple",
+      "description": "Apple is good!"
+    },
+    {
+      "id": 2,
+      "name": "Microsoft",
+      "description": "Microsoft is good!"
+    },
+    {
+      "id": 3,
+      "name": "Google",
+      "description": "Google is good!"
+    }
+  ]
+}

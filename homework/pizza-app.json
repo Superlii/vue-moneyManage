@@ -1,0 +1,25 @@
+{
+  "menu": {
+    "-LCwwRQDtj7ap0Zz": {
+      "description": "这是让人难以忘怀的披萨",
+      "name": "芝士榴莲夹心披萨",
+      "options": {
+        "0": {
+          "price": "55",
+          "size": "9"
+        },
+        "1": {
+          "price": "88",
+          "size": "12"
+        }
+      }
+    }
+  },
+  "users": {
+    "-LCrHd6LCSfTe3NH": {
+      "confirmPassword": "321321",
+      "email": "test@test.com",
+      "password": "321321"
+    }
+  }
+}
