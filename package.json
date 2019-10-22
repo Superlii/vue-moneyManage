@@ -10,7 +10,7 @@
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "author": "米斯特吴",
+  "author": "Superlii",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^2.0.1",
