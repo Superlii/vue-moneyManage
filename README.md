@@ -1,62 +1,35 @@
+# èµ„é‡‘ç®¡ç†ç³»ç»Ÿ
+### 1.é¡¹ç›®çŽ¯å¢ƒä»‹ç»ï¼š
+å‰ç«¯ï¼šVue.js+ElementUi+Vue-Cli3
+
+åŽç«¯ï¼šExpress+Mongoose
+
+æ•°æ®åº“ï¼šMongodb
+
+ç³»ç»ŸçŽ¯å¢ƒï¼šWindows10 or Macos or Linux
+
+### 2.é¡¹ç›®æ–‡ä»¶è¯´æ˜Žï¼š
+clientæ–‡ä»¶å¤¹ï¼šåŽç«¯ä»£ç 
+
+å‰©ä½™æ–‡ä»¶å¤¹ï¼šå‰ç«¯ä»£ç 
+
+### 3.é¡¹ç›®è¿è¡Œï¼š
+ä¸‹è½½ä»£ç åŽåˆ†åˆ«åœ¨æ ¹ç›®å½•è¿›è¡Œå’Œclientç›®å½•è¿›è¡Œ
 
 
-				Ä¬ÈÏ½âÑ¹ÃÜÂë:www.52programer.com
+```
+npm install
+```
 
+ç„¶åŽåœ¨æ ¹ç›®å½•è¿è¡Œ
 
-                ¨q¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨r
-                ¨U         Îá°®³ÌÐòÔ³ÂÛÌ³       ¨U
-  ¨q¨T¨T¨T¨T¨T¨T©È     www.52programer.com      ©À¨T¨T¨T¨T¨T¨T¨T¨r
-  ¨U            ¨U  ×¨×¢ÓÚÓÅÖÊIT½Ì³ÌÊÕ¼¯Óë·ÖÏí  ¨U              ¨U
-  ¨U            ¨t¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨s              ¨U
-¡¡¨U                                                            ¨U
-  ¨U                                                            ¨U
-¡¡¨U    ËµÃ÷£º±¾Õ¾½öÎª×ÊÔ´·ÖÏíµÄÆ½Ì¨£¬½Ì³Ì¡¢Èí¼þ¡¢³ÌÐòµÈ¾ù      ¨U
-¡¡¨U          À´×ÔÓÚ»¥ÁªÍø¼°ÍøÓÑ·ÖÏí£¬°æÈ¨¹éÔ­×÷ÕßËùÓÐ,         ¨U 
-¡¡¨U  	      Õ¾ÄÚ×ÊÔ´½ö¹©²Î¿¼ºÍÑ§Ï°Ö®ÓÃ£¬²»µÃÓÃÓÚÉÌÒµÓÃÍ¾£¬    ¨U
-¡¡¨U          ÏÂÔØºóÇëÔÚ24Ð¡Ê±ÄÚ×ÔÐÐÉ¾³ý¡£±¾Õ¾²»³Ðµ£ÈÎºÎ        ¨U
-¡¡¨U          ¼¼Êõ¼°°æÈ¨ÎÊÌâ¡£                                  ¨U
-  ¨U                                                            ¨U
-  ¨U     1.Çë×ñÊØÖÐ»ªÈËÃñ¹²ºÍ¹úÏà¹Ø·¨ÂÉ¡¢ÌõÀý¡£                 ¨U
-  ¨U     2.±¾Õ¾Ìá¹©µÄ¸÷Àà½Ì³Ì¡¢ÎÄÕÂ¼°Èí¼þµÈ£¬Ö»¿ÉÑÐ¾¿Ñ§Ï°£¬     ¨U
-  ¨U       ±¾Õ¾¶ÔÊ¹ÓÃÕâÐ©¹¤¾ß£¨½Ì³Ì£©¶øµ¼ÖÂµÄÒ»ÇÐºó¹û£¬²»³Ðµ£   ¨U
-  ¨U       ÈÎºÎÔðÈÎ¡£                                           ¨U
-  ¨U     3.±¾Õ¾²»±£Ö¤Ìá¹©µÄ×ÊÔ´Ê®·Ö°²È«»òÊÇÍêÈ«¿ÉÓÃ£¬ÇëÏÂÔØºó   ¨U
-  ¨U       ×ÔÐÐ¼ì²é¡£                                           ¨U
-  ¨U     4.Èç²»Í¬ÒâÒÔÉÏÉùÃ÷£¬ÇëÁ¢¼´É¾³ý£¬²»ÒªÊ¹ÓÃ£¬Ð»Ð»ºÏ×÷¡£   ¨U
-  ¨U                                                            ¨U
-  ¨U    ¨q©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤¨r      ¨U
-  ¨t¨T¨T©È  Îá°®³ÌÐòÔ³ÂÛÌ³         °æÈ¨ËùÓÐ ½ûÖ¹µÁÓÃ    ©À¨T¨T¨s
-        ¨t©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤¨s 
+```
+npm run serve
+```
+æ‰“å¼€æµè§ˆå™¨
 
-  ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
-             ÐÂÎÅ ÍøÒ³ Ìù°É ÖªµÀ MP3 Í¼Æ¬ ÊÓÆµ
+http://localhost:8080
 
-      ©³©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©¥©µ©°©¤©¤©¤©¤©¤©¶
-      ©§          Îá°®³ÌÐòÔ³ÂÛÌ³        ©¦ °Ù¶ÈÒ»ÏÂ ©§
-      ©º©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼©¹©¥©¥©¥©¥©¥©¿
+åŽç«¯æŽ¥å£åœ°å€
 
-  ©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤
-
- ¨q¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨r
- ¨U  Îá°®³ÌÐòÔ³ÂÛÌ³×¨×¢ÓÚÓÅÖÊIT½Ì³ÌÊÕ¼¯Óë·ÖÏí¡£ÊÕ¼¯ÕûÀíµÄ¶¼ÊÇ  ¨U
- ¨U  ÍøÉÏ×îÐÂ×îÓÐ¼ÛÖµµÄIT½Ì³Ì¡¢¾«Æ·Ô´ÂëÒÔ¼°ÍêÕûÏµÍ³µÄÑ§Ï°×ÊÁÏ¡£¨U
- ¨U  ÈÃ´ó¼ÒÔÚÑ§Ï°µÄµÀÂ·ÉÏÉÙ×ßÍäÂ·£¬ÉÙ»¨Ô©Í÷Ç®£¬°ïÖú´ó¼ÒÕæÕæÕý  ¨U
- ¨U  ÕýÑ§µ½¼¼Êõ!                                               ¨U
- ¨U  Ö»ÒªÓÐ´ó¼ÒµÄÖ§³Ö£¬ÎÒÃÇ»á×öµÃ¸üºÃ£¡                        ¨U
- ¨U                                                            ¨U
- ¨U                  www.52programer.com                       ¨U
- ¨t¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨T¨s  
-
-              Îá°®³ÌÐòÔ³ÂÛÌ³¹ÙÍø:www.52programer.com
-
-              Ä¬ÈÏ½âÑ¹ÃÜÂë:www.52programer.com
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
-			  
+http://localhost:3000
