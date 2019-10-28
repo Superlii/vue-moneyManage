@@ -32,16 +32,26 @@ http://localhost:3000
 ### 项目截图
 
 ### 1.用户登录界面
-![Image text](https://github.com/Superlii/Static/login.png"/>
+<center>
+<img src="https://github.com/Superlii/Static/login.png"/>
+</center>
 
 ### 2.用户注册界面
-![Image text](https://github.com/Superlii/Static/register.png"/>
+<center>
+<img src="https://github.com/Superlii/Static/register.png"/>
+</center>
 
 ### 3.主界面
-![Image text](https://github.com/Superlii/Static/index.png"/>
+<center>
+<img src="https://github.com/Superlii/Static/index.png"/>
+</center>
 
 ### 4.用户信息界面
-![Image text](https://github.com/Superlii/Static/userInfo.png"/>
+<center>
+<img src="https://github.com/Superlii/Static/userInfo.png"/>
+</center>
 
-### 5.资金流水界面
-![Image text](https://github.com/Superlii/Static/fundList.png"/>
+### 4.用户资金流水界面
+<center>
+<img src="https://github.com/Superlii/Static/fundList.png"/>
+</center>
