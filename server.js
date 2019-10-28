@@ -9,20 +9,16 @@ const users = require('./routes/api/users');
 const profiles = require('./routes/api/profiles');
 
 // DB config
-const db = require('./config/keys').mongoURI;
+var db = require('./config/keys').mongoURI;
 
 // 使用body-parser中间件
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 // Connect to mongodb
-mongoose
-  .connect(
-    db,
-    { useNewUrlParser: true }
-  )
-  .then(() => console.log('MongoDB Connected'))
-  .catch(err => console.log(err));
+mongoose.connect(db)
+        .then(() => console.log("MongoDB Connected"))
+        .catch(err => console.log(err));
 
 // passport 初始化
 app.use(passport.initialize());

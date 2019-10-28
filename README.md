@@ -1,4 +1,5 @@
-# 资金管理系统
+<h1 align="center">资金管理系统</h1>
+
 ### 1.项目环境介绍：
 前端：Vue.js+ElementUi+Vue-Cli3
 
@@ -16,16 +17,10 @@ client文件夹：后端代码
 ### 3.项目运行：
 下载代码后分别在根目录进行和client目录进行
 
-
-```
 npm install
-```
-
 然后在根目录运行
 
-```
 npm run serve
-```
 打开浏览器
 
 http://localhost:8080
@@ -33,3 +28,25 @@ http://localhost:8080
 后端接口地址
 
 http://localhost:3000
+
+### 项目截图
+
+### 1.用户登录界面
+<center>
+<img src="https://github.com/Superlii/Static/login.png"/>
+</center>
+
+### 2.用户注册界面
+<center>
+<img src="https://github.com/Superlii/Static/register.png"/>
+</center>
+
+### 3.主界面
+<center>
+<img src="https://github.com/Superlii/Static/index.png"/>
+</center>
+
+### 4.用户信息界面
+<center>
+<img src="https://github.com/Superlii/Static/userInfo.png"/>
+</center>
